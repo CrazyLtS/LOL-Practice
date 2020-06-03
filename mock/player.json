@@ -1,0 +1,35 @@
+{
+    "ref": true,
+    "data": [
+        {
+        "playerName": "Zoom",
+        "playerImg": "./src/imgs/contain/playerIfo/zoom.png",
+        "rolePosition": "-52px 0",
+        "teamLogo": "./src/imgs/contain/playerIfo/jdg.png"
+        },
+        {
+            "playerName": "Karsa",
+            "playerImg": "./src/imgs/contain/playerIfo/karsa.png",
+            "rolePosition": "0 0",
+            "teamLogo": "./src/imgs/contain/playerIfo/tes.png"
+        },
+        {
+            "playerName": "Rookie",
+            "playerImg": "./src/imgs/contain/playerIfo/rookie.png",
+            "rolePosition": "-23px -27px",
+            "teamLogo": "./src/imgs/contain/playerIfo/ig.png"
+        },
+        {
+            "playerName": "JackeyLove",
+            "playerImg": "./src/imgs/contain/playerIfo/jackeylove.png",
+            "rolePosition": "0 -27px",
+            "teamLogo": "./src/imgs/contain/playerIfo/tes.png"
+        },
+        {
+            "playerName": "Missing",
+            "playerImg": "./src/imgs/contain/playerIfo/missing.png",
+            "rolePosition": "-25px 0",
+            "teamLogo": "./src/imgs/contain/playerIfo/we.png"
+        }
+    ]
+}

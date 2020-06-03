@@ -1,0 +1,111 @@
+{
+    "ref": true,
+    "data": {
+        "key":"con-01",
+        "dataItem": [
+            {
+                "state": "已结束",
+                "date": "3-11",
+                "time": "17:00",
+                "gameScoreOne": "0",
+                "gameScoreTwo": "2",
+                "oneName": "V5",
+                "twoName": "WE",
+                "oneImg": "./src/imgs/contain/gameIfo/v5.png",
+                "twoImg": "./src/imgs/contain/gameIfo/0.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-11",
+                "time": "19:00",
+                "gameScoreOne": "0",
+                "gameScoreTwo": "2",
+                "oneName": "VG",
+                "twoName": "IG",
+                "oneImg": "./src/imgs/contain/gameIfo/vg.png",
+                "twoImg": "./src/imgs/contain/gameIfo/ig.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-12",
+                "time": "14:00",
+                "gameScoreOne": "2",
+                "gameScoreTwo": "0",
+                "oneName": "ES",
+                "twoName": "LGD",
+                "oneImg": "./src/imgs/contain/gameIfo/es.png",
+                "twoImg": "./src/imgs/contain/gameIfo/lgd.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-12",
+                "time": "17:00",
+                "gameScoreOne": "1",
+                "gameScoreTwo": "2",
+                "oneName": "BLG",
+                "twoName": "LNG",
+                "oneImg": "./src/imgs/contain/gameIfo/blg.png",
+                "twoImg": "./src/imgs/contain/gameIfo/lng.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-12",
+                "time": "19:00",
+                "gameScoreOne": "2",
+                "gameScoreTwo": "0",
+                "oneName": "SN",
+                "twoName": "EDG",
+                "oneImg": "./src/imgs/contain/gameIfo/sn.png",
+                "twoImg": "./src/imgs/contain/gameIfo/edg.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-13",
+                "time": "17:00",
+                "gameScoreOne": "2",
+                "gameScoreTwo": "0",
+                "oneName": "WE",
+                "twoName": "VG",
+                "oneImg": "./src/imgs/contain/gameIfo/0.png",
+                "twoImg": "./src/imgs/contain/gameIfo/vg.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-13",
+                "time": "19:00",
+                "gameScoreOne": "0",
+                "gameScoreTwo": "2",
+                "oneName": "DMO",
+                "twoName": "FPX",
+                "oneImg": "./src/imgs/contain/gameIfo/dmo.png",
+                "twoImg": "./src/imgs/contain/gameIfo/fpx.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-14",
+                "time": "14:00",
+                "gameScoreOne": "2",
+                "gameScoreTwo": "0",
+                "oneName": "JDG",
+                "twoName": "V5",
+                "oneImg": "./src/imgs/contain/gameIfo/jdg.png",
+                "twoImg": "./src/imgs/contain/gameIfo/v5.png"
+            },
+            {
+                "state": "已结束",
+                "date": "3-14",
+                "time": "17:00",
+                "gameScoreOne": "2",
+                "gameScoreTwo": "0",
+                "oneName": "EDG",
+                "twoName": "ES",
+                "oneImg": "./src/imgs/contain/gameIfo/edg.png",
+                "twoImg": "./src/imgs/contain/gameIfo/es.png"
+            }
+        ]
+    },
+    "gameIfo": {
+        "p1": "2020职业联赛",
+        "p2": "春季赛常规赛 第七周 BO3"
+    }
+}

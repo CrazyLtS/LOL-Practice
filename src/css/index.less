@@ -1,0 +1,1402 @@
+@import './title.less';
+@nav-height: 30px;
+.clearfix() {
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        overflow: hidden;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #000000;}
+body {font: 12px/1.5 tahoma,sans-serif;}
+// header按钮背景图片设置
+.header-btn-bg(@top, @left) {
+    background: url(../imgs/spring/topfoot-spr.png) no-repeat;
+    background-position: @top @left;
+}
+// 默认按钮按键样式
+.btn-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+}
+// 大按钮
+.bg-btn {
+    width: 158px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .6);
+    color: #c89b2f;
+    border: 1px solid #6e5324;
+}
+// 中按钮
+.md-btn {
+    width: 78px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .6);
+    color: #c89b2f;
+    border: 1px solid #6e5324;
+}
+// 主要内容
+.master {
+    width: 780px;
+    float: left;
+}
+// 侧边内容
+.side {
+    width: 480px;
+    float: right;
+}
+// 模块居中默认样式
+.contain-center {
+    width: 1300px;
+    margin: 0 auto 48px;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.g-wrap-vp {
+    background-color: #e3e2e2;
+    padding: 64px 0 66px 0;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .wrap-vp {
+        margin: 0 auto;
+        width: 1300px;
+    }
+}
+
+.selected {
+    position: relative;
+    font-weight: 700;   
+    color: #1da6ba !important;
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: url(../imgs/contain/notice-btn/tab-title-selected.png) no-repeat center center;
+        animation: selected .2s;
+    }
+    @keyframes selected {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+}
+
+/* 
+主要业务样式
+ */
+
+.wraper {
+    font-size: 12px/1.5 tahoma,sans-serif;
+    width: 100%;
+    height: 2000px;
+    .header {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        overflow: hidden;
+        width: 100%;
+        min-width: 1350px;
+        height: 80px;
+        color: #fff;
+        .header-left {
+            width: 160px;
+            margin-top: 10px;
+            float: left;
+        }
+        .header-contain {
+            width: 750px;
+            padding-top: 16px;
+            float: left;
+            .contain-list {
+                display: flex;
+                .list-item {
+                    float: left;
+                    height: 60px;
+                    width: 20%;
+                    text-align: center;
+                    .item-text-ch {
+                        display: block;
+                        width: 100%;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        line-height: 1.5em;
+                        color: #fff;
+                    }
+                    .item-text-en {
+                        display: block;
+                        width: 100%;
+                        font-size: 11px;
+                        margin-top: -1px;
+                        color: #aeaeae;
+                    }
+                }
+            }
+            
+        }   
+        .header-rigth {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 48px;
+            line-height: 48px;
+            width: 375px;
+            overflow: hidden;
+            .header-btn {
+                float: left;
+                height: 24px;
+                .btn-search {
+                    width: 21px;
+                    height: 21px;
+                    .header-btn-bg(-381px, -39px)
+                }
+                .btn-phone {
+                    width: 16px;
+                    height: 24px;
+                    .header-btn-bg(-303px, -84px)
+                }
+            }
+            .header-login {
+                float: right;
+                height: 48px;
+                >a {
+                    position: relative;
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    margin-right: 15px;
+                    text-align: center;
+                    font-size: 0;
+                    overflow: hidden;
+                    .login-img {
+                        display: inline-block;
+                        width: 36px;
+                        vertical-align: middle;
+                        border-radius: 50%;
+                    }
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                        .header-btn-bg(-216px, -117px)
+                    }
+                }
+                .login-ifon {
+                    float: right;
+                    font-size: 16px;
+                    .login-btn {
+                        color: #fff3d0;
+                    }
+                }
+            }
+        }
+    }
+    .contain {
+        
+       .hot-news {
+            position: relative;
+            height: 720px;
+            line-height: 0;
+            overflow: hidden;
+            transition: height .5s;
+            // 主题图片
+           .fade-out {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+           }
+        //    查看详情
+           .check-ifon {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 32px;
+                margin: 0 auto;
+           }
+           .game-version {
+                position: absolute;
+                right: 0;
+                bottom: 32px;
+                font-size: 14px;
+                color: #888787;
+                .v-ifon {
+                    color: #c89b2f;
+                    margin-right: 10px;
+                }
+                .v-detail {
+                    &:hover {
+                        background-color: rgba(0, 0, 0, .8);
+                    }
+                }
+           }
+           .dark-mask {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 141px;
+               background: url(../imgs/contain/hot-new/dark-jianbian-repeatx-0.png) repeat-x center top;
+           }
+       } 
+       .main {
+           width: 100%;
+           background-color: #eee;
+            .notice {
+                height: 359px;
+                padding-top: 35px;
+                overflow: hidden;
+                .nt-logo {
+                    display: inline-block;
+                    width: 35px;
+                    height: 20px;
+                    line-height: 18px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    color: #bb9a6c;
+                    border: 1px #c5ab86 solid;
+                }
+                .gm-logo {
+                    display: inline-block;
+                    width: 35px;
+                    height: 20px;
+                    line-height: 18px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    color: #6388c5;
+                    border: 1px #97afc5 solid;
+                }
+                .notice-swiper {
+                    position: relative;
+                    width: 762px;
+                    height: 100%;
+                    float: left;
+                    overflow: hidden;
+                    background-color: #333;
+                    .swiper {
+                        position: absolute;
+                        left: 0;
+                        transition: left .5s;
+                        overflow: hidden;
+                        .swiper-item {
+                            list-style: none;
+                            float: left;
+                            width: 762px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .swiper-icon-nav {
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        width: 100%;
+                        .swiper-icon {
+                            flex: 1;
+                            text-align: center;
+                            line-height: 40px;
+                            font-size: 14px;
+                            background-color: #e3e2e2;
+                        }
+                        .active {
+                            background-color: #f7f6f6;
+                            border-bottom: 2px #cea861 solid;
+                        }
+                    }
+                }
+                .notice-news {
+                    position: relative;
+                    width: 490px;
+                    height: 100%;
+                    float: right;
+                    .notice-nav {
+                        height: 34px;
+                        display: flex;
+                        border-bottom: 1px solid #e0e2e2;
+                        .notice-btn {
+                            flex: 1;
+                            text-align: center;
+                            cursor: pointer;
+                            color: #676767;
+                            &:not(:last-child) {
+                                margin-right: 74px;
+                            }
+                        }
+                    }
+                    .notice-ifon {
+                        .ifon-title {
+                            width: 100%;
+                            height: 59px;
+                            line-height: 59px;
+                            font-size: 22px;
+                            font-weight: 700;
+                            text-align: center;
+                            border-bottom: 1px solid #e0e2e2;
+                            color: #0da0b4;
+                        }
+                        .ifon {
+                            box-sizing: border-box;
+                            position: relative;
+                            width: 100%;
+                            height: 37px;
+                            line-height: 37px;
+                            padding: 0 58px 0 54px;
+                            font-size: 14px;
+                            border-bottom: 1px solid #e0e2e2;
+                            .ifon-text {
+                                cursor: pointer;
+                                color: #424242;
+                                letter-spacing: 1px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .nt-text {
+                                &:hover {
+                                   color: #bb9a6c; 
+                                }
+                            }
+                            .gm-text {
+                                &:hover {
+                                    color: #6388c5;
+                                }
+                            }
+                            .ifon-logo {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
+                            }
+                            .notice-time {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: #9d9d9d;
+                            }
+                        }
+                    }
+                    .notice-btn-detail {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 14px;
+                        cursor: pointer;
+                        color: #676767;
+                        background-color: #e3e2e2;
+                        &:hover {
+                            background-color: #d4d3d3;
+                        }
+                        .more-detail();
+                        .c2 {
+                            font-size: 14px;
+                            color: #7ea1a6;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            .component-3 {
+                .campaign{
+                    .cam-contain {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-top: 20px;
+                        .tap {
+                            position: relative;
+                            width: 176px;
+                            height: 268px;
+                            cursor: pointer;
+                            transition: transform .3s;
+                            background-color: #fff;
+                            &:hover {
+                                transform: translateY(-8px);
+                                .innerhover {
+                                    display: block;
+                                }
+                                .tap-title {
+                                    color: #1da6ba;
+                                }
+                            }
+                            .tap-img {
+                                width: 100%;
+                            }
+                            .innerhover {
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 189px;
+                                line-height: 189px;
+                                width: 100%;
+                                background-color: rgba(0, 0, 0, .5);
+                                background-image: url(../imgs/contain/swiper/comm-spr.png);
+                                background-position: 1px 2px;
+                                background-size: 365px 185px;
+                                background-repeat: no-repeat;
+                                .innerhover-border {
+                                    box-sizing: border-box;
+                                    display: inline-block;
+                                    padding: 0 11px 0;
+                                    vertical-align: middle;
+                                    width: 100%;
+                                    line-height: 1.5em;
+                                    h4 {
+                                        margin-bottom: 8px;
+                                        text-align: center;
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        color: #cdbe91;
+                                    }
+                                    p {
+                                        text-align: center;
+                                        font-size: 12px;
+                                        color: #9d9c9c;
+                                    }
+                                }
+                            }
+                            .tap-title {
+                                width: 100%;
+                                text-indent: 1em;
+                                font-size: 14px;
+                                color: #424242;
+                                height: 18px;
+                                line-height: 18px;
+                                text-align: left;
+                            }
+                            .end-time {
+                                position: absolute;
+                                bottom: 0;
+                                left: 12px;
+                                width: 100%;
+                                font-size: 12px;
+                                height: 25px;
+                                color: #1da6ba;
+                                .new-btn {
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 3px;
+                                    right: 22px;
+                                    background: url(../imgs/contain/swiper/comm-spr.png) no-repeat;
+                                    background-position: -301px -46px;
+                                    width: 29px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .service {
+                    height: 100%;
+                    .ser-headre {
+                        position: relative;
+                        height: 160px;
+                        width: 100%;
+                        .down-game {
+                            width: 350px;
+                            height: 160px;
+                            cursor: pointer;
+                            transition: filter 1s;
+                            &:hover {
+                                filter: brightness(1.2);
+                            }
+                            .down-game-video {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .benefits {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 118px;
+                            height: 100%;
+                            [class^="href-type"] {
+                                height: 73px;
+                                line-height: 73px;
+                                width: 100%;    
+                                color: #ffffff;
+                                font-size: 14px;
+                                font-weight: 700;
+                                cursor: pointer;
+                                text-align: center;
+                                background: url(../imgs/spring/index-spr.png) no-repeat;
+                                background-position: -193px -318px;
+                                transition: filter .5s;
+                                &:hover {
+                                    filter: brightness(1.1);
+                                }
+                            }
+                            .href-type-1 {
+                                position: absolute;
+                                bottom: 0;
+                            }
+                            .type-0-wraper {
+                                position: relative;
+                                height: 73px;
+                                background-color: #ffffff;
+                                .href-type-0 {
+                                    position: absolute;
+                                }
+                                &:hover {
+                                    .href-type-0 {
+                                        display: none;
+                                    }
+                                }
+                                .inner-href {
+                                    width: 100%;
+                                    >a {
+                                        float: left;
+                                        width: 59px;
+                                        box-sizing: border-box;
+                                        border-right: 1px #eee solid;
+                                        color: #424242;
+                                        font-size: 12px;
+                                        line-height: 30px;
+                                        text-align: center;
+                                        font-weight: 700;
+                                        &:hover {
+                                            color: #1da6ba;
+                                        }
+                                        .guide-btn {
+                                            display: block;
+                                            margin: 18px auto 0 auto;
+                                            background-position: -244px -72px;
+                                            width: 20px;
+                                            height: 22px;
+                                            background-image: url(../imgs/contain/swiper/comm-spr.png);
+                                            background-size: 393px 200px;
+                                            background-repeat: no-repeat;
+                                        }
+                                        .gift-btn {
+                                            display: block;
+                                            margin: 18px auto 0 auto;
+                                            background-position: -285px -99px;
+                                            width: 20px;
+                                            height: 22px;
+                                            background-image: url(../imgs/contain/swiper/comm-spr.png);
+                                            background-size: 393px 200px;
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ser-tab {
+                        height: 146px;
+                        width: 100%;
+                        margin-top: 12px;
+                        .tab-wraper {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            align-items: normal;
+                            .tab-item {
+                                width: 110px;
+                                height: 68px;
+                                line-height: 68px;
+                                text-align: center;
+                                margin-bottom: 9px;
+                                cursor: pointer;
+                                color: #424242;
+                                background-color: #ffffff;
+                                transition: box-shadow .3s;
+                                &:hover {
+                                    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2) ;
+                                    border-radius: 4px;
+                                    color: #0da0b4;
+                                    [class^="icon-"] {
+                                        animation: scaleicon ease .6s;
+                                    }
+                                }
+                                .icon-kf {
+                                    background-position: -316px -12px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-zx {
+                                    background-position: -219px -72px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-zl {
+                                    background-position: -343px -12px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-xg {
+                                    background-position: -193px -72px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-yd {
+                                    background-position: -280px -125px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-gl {
+                                    background-position: -371px -12px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-yz {
+                                    background-position: -274px -46px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                .icon-bd {
+                                    background-position: -193px -46px;
+                                    width: 22px;
+                                    height: 20px;
+                                }
+                                [class^="icon-"] {
+                                    margin: -2px 4px 0 4px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    background-image: url(../imgs/contain/swiper/comm-spr.png);
+                                    background-size: 393px 200px;
+                                    background-repeat: no-repeat;
+                                }
+                                @keyframes scaleicon {
+                                    0% {transform: scale(1);}
+                                    20%{transform: scale(.8);}
+                                    40%{transform: scale(1);}
+                                    60%{transform: scale(1.2);}
+                                    80%{transform: scale(1);}
+                                    100%{transform: scale(1.1);}
+                                }
+                            }
+                        }
+                    }
+                }
+           }
+           .component-4 {
+               padding-bottom: 17px;
+                .newthing {
+                    display: flex;
+                    .new-hero {
+                        position: relative;
+                        flex: 1;
+                        width: 373.5px;
+                        height: 236px;
+                        margin-right: 15px;
+                        &:hover {
+                            .inner-ifon {
+                                display: block;
+                                animation: show .5s;
+                            }
+                        }
+                        @keyframes show {
+                            from {
+                                display: none;
+                                top: 10px;
+                                opacity: .2;
+                            }
+                            to {
+                                display: block;
+                                top: 0;
+                                opacity: 1;
+                            }
+                        }
+                        .inner-ifon {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, .6);
+                            background-image: url(../imgs/spring/index-spr.png);
+                            background-repeat: no-repeat;
+                            background-position: 4px 2px;
+                            background-size: 590px 535px;
+                            .p1 {
+                                color: #cdbe91;
+                                font-size: 18px;
+                                position: absolute;
+                                left: 27px;
+                                top: 20px;
+                            }
+                        }
+                        .detail-btn {
+                            position: absolute;
+                            bottom: 15px;
+                            left: 20px;
+                            width: 154px;
+                            height: 42px;
+                            line-height: 42px;
+                            color: #ffdb8b;
+                            font-size: 14px;
+                            text-align: center;
+                            cursor: pointer;
+                            background: url(../imgs/spring/index-spr.png) no-repeat;
+                            background-position: -401px -179px;
+                            .more-detail();
+                            .more-arrow {
+                                background-position: -362px -99px;
+                            }
+                        }
+                    }
+                    .new-skin {
+                        position: relative;
+                        flex: 1;
+                        width: 373.5px;
+                        height: 236px;
+                        .inner-video {
+                            display: none;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 373.5px;
+                            height: 236px;
+                            line-height: 0;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+                            .skin-ifon {
+                                position: relative;
+                                width: 100%;
+                                height: 54px;
+                                padding-top: 10px;
+                                line-height: 20px;
+                                background-color: #fff;
+                                .p1 {
+                                    width: 100%;    
+                                    height: 24px;
+                                    overflow: hidden;
+                                    line-height: 24px;
+                                    box-sizing: border-box;
+                                    padding-left: 11px;
+                                    color: #0b0b0b;
+                                    font-size: 16px;
+                                    text-align: left;
+                                }
+                                .p2 {
+                                    width: 100%;
+                                    height: 20px;
+                                    overflow: hidden;
+                                    line-height: 20px;
+                                    box-sizing: border-box;
+                                    padding-left: 11px;
+                                    color: #a1a1a2;
+                                    font-size: 12px;
+                                    text-align: left;
+                                    margin-bottom: 10px;
+                                }
+                                .md-btn {
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 18px;
+                                    width: 86px;
+                                    height: 29px;
+                                    line-height: 27px;
+                                    color: #bb9a6c;
+                                    background-color: #fff;
+                                    font-size: 14px;
+                                    box-sizing: border-box;
+                                    border: 1px #bb9a6c solid;
+                                    transition: background-color .3s;
+                                    &:hover {
+                                        background-color: #bb9a6c;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        .show-video {
+                            width: 405px;
+                            height: 292px;
+                            left: -15px;
+                            top: -20px;
+                        }
+                    }
+                    .label {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        display: block;
+                        width: auto;
+                        height: 18px;
+                        line-height: 18px;
+                        padding: 0 5px;
+                        color: #cdbe91;
+                        background-color: black;
+                    }
+                    .p-title {
+                        position: absolute;
+                        bottom: 33px;
+                        left: 20px;
+                        line-height: 20px;
+                        color: #cdbe91;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                    .p3 {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 20px;
+                        color: #cfcfcf;
+                        font-size: 12px;
+                    }
+                }
+                .more-skin {
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    transition: height .3s;
+                    .clearfix();
+                    .skin-nav {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 117px;
+                        overflow: hidden;
+                        width: 100%;
+                        transition: margin .5s;
+                        .skin-item {
+                            position: relative;
+                            height: 117px;
+                            width: 176px;
+                            overflow: hidden;
+                            background-color: #aeaeae;
+                            >p {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 14px;
+                                text-align: center;
+                                color: #cdbe91;
+                                background-color: rgba(0, 0, 0, .5);
+                            }
+                            .skin-item-img {
+                                width: 100%;
+                                height: 100%;
+                                transition: transform .3s;
+                            }
+                            &:hover {
+                                .skin-item-img {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+                }
+                .version {
+                    .version-left {
+                        float: left;
+                        .d1 {
+                            position: relative;
+                            width: 240px;
+                            height: 112px;
+                            z-index: 1;
+                            >img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:hover {
+                                .inner-version {
+                                    display: block;
+                                    animation: showversion .3s;
+                                }
+                            }
+                            @keyframes showversion {
+                                from {
+                                    left: 0;
+                                    top: 0;
+                                    width: 240px;
+                                    height: 185px;
+                                }
+                                to {
+                                    left: -15px;
+                                    top: -15px;
+                                    width: 265px;
+                                    height: 210px;
+                                }
+                            }
+                            .inner-version {
+                                display: none;
+                                position: absolute;
+                                left: -15px;
+                                top: -15px;
+                                width: 265px;
+                                height: 238px;
+                                line-height: 0;
+                                transition: 1s;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+                                .version-ifon {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 54px;
+                                    padding-top: 10px;
+                                    line-height: 20px;
+                                    background-color: #fff;
+                                    .p1 {
+                                        width: 100%;    
+                                        height: 24px;
+                                        overflow: hidden;
+                                        line-height: 24px;
+                                        box-sizing: border-box;
+                                        padding-left: 11px;
+                                        color: #0b0b0b;
+                                        font-size: 16px;
+                                        text-align: left;
+                                    }
+                                    .p2 {
+                                        width: 100%;
+                                        height: 20px;
+                                        overflow: hidden;
+                                        line-height: 20px;
+                                        box-sizing: border-box;
+                                        padding-left: 11px;
+                                        color: #a1a1a2;
+                                        font-size: 12px;
+                                        text-align: left;
+                                        margin-bottom: 10px;
+                                    }
+                                    .md-btn {
+                                        position: absolute;
+                                        right: 15px;
+                                        top: 18px;
+                                        width: 86px;
+                                        height: 29px;
+                                        line-height: 27px;
+                                        color: #bb9a6c;
+                                        background-color: #fff;
+                                        font-size: 14px;
+                                        box-sizing: border-box;
+                                        border: 1px #bb9a6c solid;
+                                        transition: background-color .3s;
+                                        &:hover {
+                                            background-color: #bb9a6c;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                .version-src {
+                                    width: 100%;
+                                    height: 173px;
+                                }
+                            }
+                        }
+                        .d2 {
+                            position: relative;
+                            width: 240px;
+                            height: 112px;
+                            margin-top: 12px;
+                            cursor: pointer;
+                            >img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                transition: position 1s;
+                            }
+                        }
+                    }
+                    .version-right {
+                       width: 230px; 
+                       height: 236px;
+                       float: right;
+                       .dev-ifon {
+                           position: relative;
+                           width: 100%;
+                           height: 170px;
+                           background-color: rebeccapurple;
+                           >img {
+                               width: 100%;
+                               height: 100%;
+                           }
+                           .dev-msg {
+                               box-sizing: border-box;
+                               position: absolute;
+                               top: 0;
+                               left: 0;
+                               width: 100%;
+                               height: 100%;
+                               padding: 40px 5px 0 5px;
+                               text-align: center;
+                               cursor: pointer;
+                               opacity: 0;
+                               transition: opacity .2s;
+                               background-color: rgba(0, 0, 0, .5);
+                               background-image: url(../imgs/spring/index-spr.png);
+                               background-size: 617px 550px;
+                               background-repeat: no-repeat;
+                               background-position: -388px 1px;
+                               &:hover {
+                                opacity: 1;
+                               }
+                               .p2 {
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: #cdbe91;
+                                margin-bottom: 2px;
+                               }
+                               .p3 {
+                                overflow: hidden;
+                                font-size: 12px;
+                                color: #9d9c9c;
+                               }
+                           }
+                       }
+                       .zm-btn {
+                           position: relative;
+                           width: 100%;
+                           height: 52px;
+                           line-height: 52px;
+                           margin-top: 14px;
+                           text-align: center;
+                           font-size: 16px;
+                           color: #fff;
+                           cursor: pointer;
+                           background: url(../imgs/spring/index-spr.png);
+                           background-position: -193px -253px;
+                           .more-detail();
+                           .more-arrow {
+                                background-position: -342px -99px;
+                            }
+                            @keyframes fzlist {
+                                from {
+                                    opacity: 0;
+                                    bottom: -190px;
+                                }
+                                to {
+                                    opacity: 1;
+                                    bottom: -200px;
+                                }
+                            }
+                            .fzhero-list {
+                                display: none;
+                                position: absolute;
+                                bottom: -200px;
+                                right: 0;
+                                z-index: 10;
+                                width: 399px;
+                                height: 158px;
+                                padding: 15px 0 10px 8px;
+                                cursor: default;
+                                background-color: #ffffff;
+                                box-shadow: 0 0 7px rgba(0, 0, 0, .2);
+                                .up-agl {
+                                display: inline-block;
+                                position: absolute;
+                                top: -7px;
+                                right: 115px;
+                                width: 14px;
+                                height: 7px;
+                                background-image: url(../imgs/spring/index-spr.png);
+                                background-position: -556px -226px;
+                                }
+                                .fz-item {
+                                    float: left;
+                                    width: 45px;
+                                    height: 45px;
+                                    margin-right: 8px;
+                                    margin-bottom: 5px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    border: 2px solid #c89b2f;
+                                    background-color: #fff;
+                                }
+                            }
+                            .fzshow {
+                                display: block;
+                                animation: fzlist .5s;
+                            }
+                       }
+                    }
+                }
+            }
+            .component-5 {
+                .new-video {
+                    height: 462px;
+                    // background-color: #9d9c9c;
+                    .cam-nav {
+                        border-bottom: 1px solid #d6d7d8;
+                    }
+                    .netx {
+                        float: right;
+                        cursor: pointer;
+                        color: #7ea1a6;
+                        &:hover {
+                            color: #0da0b4;
+                            .icon-hyp {
+                                background-position: -364px -72px;
+                            }
+                        }
+                        .icon-hyp {
+                            display: inline-block;
+                            background-position: -369px -46px;
+                            width: 13px;
+                            height: 12px;
+                            background-image: url(../imgs/contain/swiper/comm-spr.png);
+                            background-size: 393px 200px;
+                            background-repeat: no-repeat;
+                        }
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 1px;
+                            height: 10px;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            background-color: #cacbcc;
+                        }
+                    }
+                    .video-content {
+                        position: relative;
+                        margin-top: 32px;
+                        overflow: hidden;
+                        .video-item {
+                            float: left;
+                            width: 179px;
+                            height: 185px;
+                            overflow: hidden;
+                            margin: 0 16px 16px 0;
+                            position: relative;
+                            // background-color: #ffdb8b;
+                            .mask-img {
+                                width: 100%;
+                                height: 107px;
+                                overflow: hidden;
+                                position: relative;
+                                cursor: pointer;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .video-length {
+                                position: absolute;
+                                right: 10px;
+                                top: 85px;
+                                color: #fff;
+                                font-size: 12px;
+                            }
+                            .name-video {
+                                position: absolute;
+                                left: 0;
+                                top: 118px;
+                                width: 100%;
+                                height: 42px;
+                                overflow: hidden;
+                                padding: 0 10px;
+                                box-sizing: border-box;
+                                font-size: 14px;
+                                line-height: 21px;
+                                color: #424242;
+                                cursor: pointer;
+                                &:hover {
+                                    color: #0da0b4; 
+                                }
+                            }
+                            .play-times {
+                                position: absolute;
+                                left: 9px;
+                                bottom: 4px;
+                                font-size: 12px;
+                                color: #919091;
+                            }
+                            .update-time {
+                                position: absolute;
+                                right: 13px;
+                                bottom: 4px;
+                                font-size: 12px;
+                                color: #919091;
+                            }
+                        }
+                    }
+                }
+                .hot-album {
+                    position: relative;
+                    height: 462px;
+                    // background-color: #ffdb8b;
+                    .cam-nav-btn {
+                        margin-right: 20px;
+                    }
+                    .cam-nav-btn:last-child {
+                        margin-right: 2px;
+                    }
+                    .slip-wrap {
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+                        height: 350px;
+                        .slip-main {
+                            position: absolute;
+                            left: 1px;
+                            overflow: hidden;
+                            margin-top: 32px;
+                            .slip-item {
+                                position: relative;
+                                float: left;
+                                width: 150px;
+                                margin-right: 13px;
+                                color: #fff;
+                                .item-wraper {
+                                    position: relative;
+                                    cursor: pointer;
+                                    .program-pic {
+                                        width: 100%;
+                                    }
+                                    .name-program {
+                                        position: absolute;
+                                        bottom: 40px;
+                                        width: 100%;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        text-align: center;
+                                    }
+                                    .progress-program {
+                                        position: absolute;
+                                        bottom: 20px;
+                                        width: 100%;
+                                        font-size: 12px;
+                                        text-align: center;
+                                    }
+                                }
+                                .name-progress {
+                                    font-size: 14px;
+                                    text-align: left;
+                                    color: #919091;
+                                    width: 100%;
+                                    height: 42px;
+                                    overflow: hidden;
+                                    line-height: 21px;
+                                    cursor: pointer;
+                                    margin-top: 10px;
+                                    margin-bottom: 15px;
+                                    &:hover {
+                                        color: #0da0b4;
+                                    }
+                                }
+                                .author-program {
+                                    display: block;
+                                    width: 100%;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    box-sizing: border-box;
+                                    padding-left: 4px;
+                                    color: #919091;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    img {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        *zoom: 1;
+                                        *display: inline;
+                                        border-radius: 50%;
+                                        width: 30px;
+                                        height: 30px;
+                                        margin: -2px 2px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .more-hotprogram {
+                        position: absolute;
+                        bottom: 16px;
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 16px;
+                        color: #ab8e66;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+                        background-color: #eee;
+                        background-image: url(../imgs/spring/index-spr.png);
+                        background-position: 0 -522px;
+                        background-size: 619px 572px;
+                        background-repeat: no-repeat;
+                        .more-detail();
+                        .more-arrow {
+                            background-position: -362px -99px;
+                        }
+                    }
+                    .swiper-left {
+                        display: block;
+                        position: absolute;
+                        left: -22px;
+                        top: 200px;
+                        background-image: url(../imgs/spring/index-spr.png);
+                        background-size: 638px 572px;
+                        background-repeat: no-repeat;
+                        background-position: -221px -397px;
+                        width: 23px;
+                        height: 51px;
+                        cursor: pointer;
+                    }
+                    .swiper-right {
+                        position: absolute;
+                        top: 200px;
+                        right: -22px;
+                        background-position: -193px -397px;
+                        width: 23px;
+                        height: 51px;
+                        background-image: url(../imgs/spring/index-spr.png);
+                        background-size: 638px 572px;
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 第六部分
+@import './component6';
+// @import './component7';
+@import './component8';

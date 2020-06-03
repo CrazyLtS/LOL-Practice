@@ -1,0 +1,64 @@
+* {margin: 0; padding: 0;}
+html , body {height: 100%; overflow: hidden;}
+#froword-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#fro-bg-img {
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/in_top_bj.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 560px;
+    background-position: 0 0;
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#draw {
+    width: 100%;
+    height: auto/*默认全屏显示 可自己设置高度640px*/;
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+}
+.content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    padding: 15px;
+    padding-top: 30px;
+    transform: translate(-50%, -50%);
+    width: 290px;
+    height: 170px;
+    text-align: center;
+    line-height: 170px;
+    color: #ffffff;
+    background-color: rgba(253, 255, 255, .6);
+}
+#froword-bg .content p {
+    line-height: 30px;
+    font-size: 16px;
+}
+.show-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 70px;
+    height: 30px;
+}
+.wraper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}

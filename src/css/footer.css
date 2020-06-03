@@ -1,0 +1,87 @@
+.footer {
+  width: 100%;
+  min-width: 1230px;
+  padding: 45px 0;
+  background-color: #e3e2e2;
+  color: #9f9378;
+  font-size: 12px;
+  line-height: 24px;
+}
+.footer .foot-inner {
+  max-width: 1358px;
+  min-width: 1230px;
+  padding: 15px 20px;
+  position: relative;
+}
+.footer .foot-inner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.footer .foot-inner .foot_lefts {
+  float: left;
+  display: block!important;
+  height: 100px;
+  width: auto;
+  line-height: 100px;
+  font-size: 0;
+  text-align: left;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -50px;
+}
+.footer .foot-inner .foot_lefts > a {
+  float: left;
+  background-position: -216px 0;
+  width: 189px;
+  height: 34px;
+  margin: 10px 0 0 10px;
+  margin-right: 30px;
+  background-image: url(../imgs/spring/topfoot-spr.png);
+  background-size: 405px 178px;
+  background-repeat: no-repeat;
+}
+.footer .foot-inner .foot_lefts > span {
+  float: left;
+  background-position: -216px -84px;
+  width: 82px;
+  height: 28px;
+  margin: 10px 0 0 10px;
+  background-image: url(../imgs/spring/topfoot-spr.png);
+  background-size: 405px 178px;
+  background-repeat: no-repeat;
+}
+.footer .foot-inner .foot_links {
+  float: right;
+  list-style: none;
+  width: 750px;
+  margin-left: 500px;
+}
+.footer .foot-inner .foot_links > li {
+  color: #9f9378;
+  line-height: 20px;
+  overflow: hidden;
+}
+.footer .foot-inner .foot_links > li img {
+  vertical-align: middle;
+  margin-right: 3px;
+  display: inline;
+}
+.footer .foot-inner .foot_links > li span {
+  font-size: 10px !important;
+}
+.footer .foot-inner .foot_links a {
+  color: #9f9378;
+}
+.footer .foot-inner .foot_links a:hover {
+  text-decoration: underline;
+}
+.footer .foot-inner .foot_links .copyright_txt {
+  font-size: 10px;
+}
+.footer .foot-inner .foot_links .link_map .line {
+  color: #9f9378;
+  margin: 0 1px;
+  font-size: 0;
+}

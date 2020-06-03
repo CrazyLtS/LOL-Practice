@@ -1,0 +1,89 @@
+{
+    "ref": true,
+    "data": [
+        {
+            "rank": 1,
+            "clubName": "IG",
+            "clubImg": "./src/imgs/contain/gameIfo/ig.png",
+            "Outcome": "14/2",
+            "integral": "14"
+        },
+        {
+            "rank": 2,
+            "clubName": "JDG",
+            "clubImg": "./src/imgs/contain/gameIfo/jdg.png",
+            "Outcome": "12/4",
+            "integral": "12"
+        },
+        {
+            "rank": 3,
+            "clubName": "FPX",
+            "clubImg": "./src/imgs/contain/gameIfo/fpx.png",
+            "Outcome": "12/4",
+            "integral": "12"
+        },
+        {
+            "rank": 4,
+            "clubName": "TES",
+            "clubImg": "./src/imgs/contain/gameIfo/ig.png",
+            "Outcome": "11/5",
+            "integral": "11"
+        },
+        {
+            "rank": 5,
+            "clubName": "ES",
+            "clubImg": "./src/imgs/contain/gameIfo/es.png",
+            "Outcome": "11/5",
+            "integral": "11"
+        },
+        {
+            "rank": 6,
+            "clubName": "EDG",
+            "clubImg": "./src/imgs/contain/gameIfo/edg.png",
+            "Outcome": "9/7",
+            "integral": "9"
+        },
+        {
+            "rank": 7,
+            "clubName": "RNG",
+            "clubImg": "./src/imgs/contain/gameIfo/rng.png",
+            "Outcome": "8/8",
+            "integral": "8"
+        },
+        {
+            "rank": 8,
+            "clubName": "WE",
+            "clubImg": "./src/imgs/contain/gameIfo/0.png",
+            "Outcome": "8/8",
+            "integral": "8"
+        },
+        {
+            "rank": 9,
+            "clubName": "VG",
+            "clubImg": "./src/imgs/contain/gameIfo/vg.png",
+            "Outcome": "7/9",
+            "integral": "7"
+        },
+        {
+            "rank": 10,
+            "clubName": "BLG",
+            "clubImg": "./src/imgs/contain/gameIfo/blg.png",
+            "Outcome": "7/9",
+            "integral": "7"
+        },
+        {
+            "rank": 11,
+            "clubName": "SN",
+            "clubImg": "./src/imgs/contain/gameIfo/sn.png",
+            "Outcome": "7/9",
+            "integral": "7"
+        },
+        {
+            "rank": 12,
+            "clubName": "OMG",
+            "clubImg": "./src/imgs/contain/gameIfo/omg.png",
+            "Outcome": "7/9",
+            "integral": "7"
+        }
+    ]
+}

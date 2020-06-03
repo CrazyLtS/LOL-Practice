@@ -1,0 +1,69 @@
+@nav-height: 30px;
+.more-detail() {
+    &:hover {
+        .more-arrow {
+            animation: identifie linear 1s;
+        }
+        @keyframes identifie {
+            20% {transform: translateX(0px);}
+            40% {transform: translateX(3px);}
+            60% {transform: translateX(0px);}
+            80% {transform: translateX(3px);}
+            100% {transform: translateX(0px);;}
+        }
+    }
+       .more-arrow {
+        display: inline-block;
+        background-position: -213px -126px;
+        width: 15px;
+        height: 9px;
+        background-image: url(../imgs/contain/swiper/comm-spr.png);
+        background-repeat: no-repeat;
+    }
+}
+.cam-header {
+    box-sizing: border-box;
+    position: relative;
+    height: @nav-height;
+    border-left: 5px solid #1da6ba;
+    .cam-title {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 8px;
+        color: #0b0b0b;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .cam-nav {
+        height: 100%;
+        line-height: @nav-height;
+        margin-left: 125px;
+        border-bottom: 1px solid #e0e2e2;
+        overflow: visible;
+        .cam-nav-btn  {
+            float: left;    
+            margin-right: 36px;
+            cursor: pointer;
+            text-align: center;
+            color: #676767;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .move-btn {
+            float: right;
+            cursor: pointer;
+            .c2 {
+                font-size: 12px;
+                margin-right: 3px;
+                color: #7ea1a6;
+                &:hover {
+                    color: #0da0b4;
+                    text-decoration: underline;
+                }
+            }
+            .more-detail();
+        }
+    }
+}

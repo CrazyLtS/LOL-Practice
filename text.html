@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <link rel="stylesheet" href="./src/css/perfect_scrollbar.css">
+    <style>
+        body {
+            height: 1000px;
+        }
+        #container {
+            background-color: aquamarine;
+            height: 200px;
+            width: 300px;
+            position: relative;
+        }
+        li {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="container">
+        <ul>
+            <li>sdflsdjfas</li>
+            <li>sdflsdjfa53s</li>
+            <li>sdflsdj34fas</li>
+            <li>234sdflsdjfas</li>
+            <li>sdfl345djfas</li>
+            <li>sdf35lsdjfas</li>
+            <li>s24djfas</li>
+            <li>sdflsdjfas</li>
+            <li>sdfldsfsdjfas</li>
+            <li>s尔特他flsdjfas</li>
+            <li>s5热dflsdjfas</li>
+            <li>24sdflsdjfas</li>
+            <li>sdflsdjfas</li>
+            <li>sdflsdjfas</li>
+            <li>sdflsdjfas</li>
+        </ul>
+    </div> -->
+
+    <aside id="container" class="side score-rank">
+        <h2 class="part-top-tab">积分榜</h2>
+        <div class="rank">
+            <header>
+                <h4 class="score-rank-list-title">
+                    <a class="a-1">排名</a>
+                    <a class="a-2">俱乐部</a>
+                    <a class="a-3">胜负</a>
+                    <a class="a-4">积分</a>
+                </h4>
+            </header>
+            <main class="rank-scroll-bar">
+                <ul>
+                    <li>sdflsdjfas</li>
+                    <li>sdflsdjfa53s</li>
+                    <li>sdflsdj34fas</li>
+                    <li>234sdflsdjfas</li>
+                    <li>sdfl345djfas</li>
+                    <li>sdf35lsdjfas</li>
+                    <li>s24djfas</li>
+                    <li>sdflsdjfas</li>
+                    <li>sdfldsfsdjfas</li>
+                    <li>s尔特他flsdjfas</li>
+                    <li>s5热dflsdjfas</li>
+                    <li>24sdflsdjfas</li>
+                    <li>sdflsdjfas</li>
+                    <li>sdflsdjfas</li>
+                    <li>sdflsdjfas</li>
+                </ul>
+            </main>
+        </div>
+    </aside>
+</body>
+<script src="./src/js/perfect_scrollbar.js"></script>
+<script>
+    const  ps  =  new  PerfectScrollbar('#container', { 
+  wheelSpeed: 2 ,
+  wheelPropagation: false ,
+  minScrollbarLength: 50 
+} )
+</script>
+</html>
