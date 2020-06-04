@@ -20,32 +20,42 @@ html , body {height: 100%; overflow: hidden;}
     top: 0;
     z-index: 1;
 }
+#froword-bg .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    color: #353638;
+    font-size: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 340px;
+    height: 30px;
+    text-align: center;
+}
+#froword-bg .loading .load-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+.point {
+    font-size: 40px;
+}
+#froword-bg .loading .active {
+    animation: loding .8s ease-out;
+}
+@keyframes loding {
+    0% {transform: translateY(0px);color: #353638;}
+    50% {transform: translateY(-20px);color: #ffffff;}
+    100% {transform: translateY(0px);color: #353638;}
+}
+
 #draw {
     width: 100%;
     height: auto/*默认全屏显示 可自己设置高度640px*/;
     display: inline-block;
     position: absolute;
     z-index: -1;
-}
-.content {
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 11;
-    padding: 15px;
-    padding-top: 30px;
-    transform: translate(-50%, -50%);
-    width: 290px;
-    height: 170px;
-    text-align: center;
-    line-height: 170px;
-    color: #ffffff;
-    background-color: rgba(253, 255, 255, .6);
-}
-#froword-bg .content p {
-    line-height: 30px;
-    font-size: 16px;
 }
 .show-btn {
     position: absolute;

@@ -1,7 +1,7 @@
 (function () {
      // 获取数据
      
-     const getGameIfo = (url) => {
+    const getGameIfo = (url) => {
         // 返回一个promise对象
         return new Promise( (res, rej) => {
             /* 

@@ -172,7 +172,8 @@ body {
 .wraper {
   font-size: 8px tahoma, sans-serif;
   width: 100%;
-  height: 2000px;
+  height: 100%;
+  overflow: auto;
 }
 .wraper .header {
   box-sizing: border-box;
