@@ -1078,7 +1078,5 @@
         }
         htmlNode.appendChild(jqNode)
         htmlNode.appendChild(createScript('./src/js/perfect_scrollbar.js'))
-    }).catch((e) => {
-        console.error(e)
     })
 })()
