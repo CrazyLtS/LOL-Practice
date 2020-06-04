@@ -10,7 +10,7 @@
             const XML = new XMLHttpRequest()
             let data
             // 打开请求
-            XML.open('GET', url, false)
+            XML.open('GET', url)
             XML.responseType = 'json'
             XML.timeout = 2000
             // 监听完成
@@ -222,7 +222,7 @@
                     const $data = handleRankData(data)
                     $('.component-6 .rank-scroll-bar').append($data)
                 })
-            })
+            }).catch(() => {})
         }
         // 隐藏其他同辈页面
         conTab.siblings().fadeOut(10)
