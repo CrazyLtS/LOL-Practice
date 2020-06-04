@@ -11,7 +11,7 @@
             // 打开请求
             XML.open('GET', url)
             XML.responseType = 'json'
-            // XML.setRequestHeader('Accept', 'application/json')
+            XML.setRequestHeader('Accept', 'application/json')
             // XML.timeout = 10000
             // 监听完成
             XML.addEventListener('readystatechange', function () {
@@ -1062,21 +1062,22 @@
     })
     .then(() => {
         const htmlNode = document.documentElement
-        htmlNode.appendChild(createScript('./src/js/jquery.js'))
+        const jqNode = createScript('./src/js/jquery.js')
+        jqNode.onload = function () {
+            const indexNode = createScript('./src/js/index.js')
+            indexNode.onload = function () {
+                // 关闭加载动画
+                const forShowNode = document.getElementById('froword-bg')
+                document.body.removeChild(forShowNode)
+                wrapNode.style.visibility = 'visible'
+            }
+            htmlNode.appendChild(createScript('./src/js/Slip.js'))
+            htmlNode.appendChild(createScript('./src/js/getIfo.js'))
+            htmlNode.appendChild(indexNode)
+            htmlNode.appendChild(createScript('./src/js/hotAlbum.js'))
+            htmlNode.appendChild(createScript('./src/js/compont8.js'))
+        }
+        htmlNode.appendChild(jqNode)
         htmlNode.appendChild(createScript('./src/js/perfect_scrollbar.js'))
-    })
-    .then(() => {
-        const htmlNode = document.documentElement
-        htmlNode.appendChild(createScript('./src/js/Slip.js'))
-        htmlNode.appendChild(createScript('./src/js/getIfo.js'))
-        htmlNode.appendChild(createScript('./src/js/index.js'))
-        htmlNode.appendChild(createScript('./src/js/hotAlbum.js'))
-        htmlNode.appendChild(createScript('./src/js/compont8.js'))
-    })
-    .then(() => {
-        // 关闭加载动画
-        const forShowNode = document.getElementById('froword-bg')
-        document.body.removeChild(forShowNode)
-        wrapNode.style.visibility = 'visible'
     })
 })()
