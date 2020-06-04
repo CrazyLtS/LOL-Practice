@@ -11,7 +11,7 @@
             // 打开请求
             XML.open('GET', url)
             XML.responseType = 'json'
-            XML.setRequestHeader('Accept', 'application/json')
+            // XML.setRequestHeader('Accept', 'application/json')
             // XML.timeout = 10000
             // 监听完成
             XML.addEventListener('readystatechange', function () {
@@ -1063,8 +1063,11 @@
     .then(() => {
         const htmlNode = document.documentElement
         htmlNode.appendChild(createScript('./src/js/jquery.js'))
-        htmlNode.appendChild(createScript('./src/js/Slip.js'))
         htmlNode.appendChild(createScript('./src/js/perfect_scrollbar.js'))
+    })
+    .then(() => {
+        const htmlNode = document.documentElement
+        htmlNode.appendChild(createScript('./src/js/Slip.js'))
         htmlNode.appendChild(createScript('./src/js/getIfo.js'))
         htmlNode.appendChild(createScript('./src/js/index.js'))
         htmlNode.appendChild(createScript('./src/js/hotAlbum.js'))
