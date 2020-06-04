@@ -1043,13 +1043,13 @@
     // 生成contain节点
     const containNode = createContain()
     // 获取数据创建模块
-    getNodeIfo('../../mock/header.json').then((value) => {
+    getNodeIfo('./mock/header.json').then((value) => {
         // 添加到文档
         document.body.appendChild(wrapNode)
         // 向wrapNode 中添加子模块
         wrapNode.appendChild(createHeader(value.data))
         // 发送hotnew数据请求
-        return getNodeIfo('../../mock/hotnew.json')
+        return getNodeIfo('./mock/hotnew.json')
     })
     .then((value) => {
         containNode.appendChild(createHotNew(value.data))
