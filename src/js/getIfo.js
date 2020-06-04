@@ -10,7 +10,7 @@
             const XML = new XMLHttpRequest()
             let data
             // 打开请求
-            XML.open('GET', url)
+            XML.open('GET', url, false)
             XML.responseType = 'json'
             XML.timeout = 2000
             // 监听完成
