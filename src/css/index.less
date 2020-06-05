@@ -237,10 +237,12 @@ body {font: 12px/1.5 tahoma,sans-serif;}
             transition: height .5s;
             // 主题图片
            .fade-out {
-            position: absolute;
-            left: 0;
-            top: 0;
             z-index: -1;
+           }
+           &>img {
+                position: absolute;
+                left: -30px;
+                top: 0;
            }
         //    查看详情
            .check-ifon {
@@ -1263,7 +1265,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                     height: 462px;
                     // background-color: #ffdb8b;
                     .cam-nav-btn {
-                        margin-right: 20px;
+                        margin-right: 18px;
                     }
                     .cam-nav-btn:last-child {
                         margin-right: 2px;

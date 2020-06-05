@@ -293,10 +293,12 @@ body {
   transition: height 0.5s;
 }
 .wraper .contain .hot-news .fade-out {
-  position: absolute;
-  left: 0;
-  top: 0;
   z-index: -1;
+}
+.wraper .contain .hot-news > img {
+  position: absolute;
+  left: -30px;
+  top: 0;
 }
 .wraper .contain .hot-news .check-ifon {
   position: absolute;
@@ -1394,7 +1396,7 @@ body {
   height: 462px;
 }
 .wraper .contain .main .component-5 .hot-album .cam-nav-btn {
-  margin-right: 20px;
+  margin-right: 18px;
 }
 .wraper .contain .main .component-5 .hot-album .cam-nav-btn:last-child {
   margin-right: 2px;

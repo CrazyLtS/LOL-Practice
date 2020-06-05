@@ -162,18 +162,23 @@
     const loading = function () {
         // 动画元素
         const loadItems = [...document.querySelectorAll('.load-item')]
+
+        loadItems.forEach((value) => {
+            value.addEventListener('animationend', function () {
+                this.classList.remove('active')
+            })
+        })
         // 动态添加active类
         let index = 0
+        let timer
         function addClass() {
+            clearTimeout(timer)
             loadItems[index].classList.add('active')
             index++
             if (index >= loadItems.length) { index = 0 }
-            const timer = setTimeout(() => {
+            timer = setTimeout(() => {
                 addClass()
             }, 200);
-            setTimeout(() => {
-                loadItems[index].classList.remove('active')
-            }, 800);
         }
         addClass()
     }
