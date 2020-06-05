@@ -1029,6 +1029,64 @@
         mainNode.innerHTML = nodeText
         return mainNode
     }
+    // footer模块
+    const createFoot = function () {
+        const footNode = document.createElement('div')
+        footNode.classList.add('footer')
+        const nodeText = `<div class="foot-inner">
+        <div class="foot_lefts">
+            <a href="javascript:;"></a>
+            <span></span>
+        </div>
+        <ul class="foot_links">
+            <li class="link_map">
+                <a href="javascript:;">腾讯互动娱乐</a>
+                <span class="line">|</span>
+                <a href="javascript:;">服务条款</a>
+                <span class="line">|</span>
+                <a href="javascript:;">隐私保护指引</a>
+                <span class="line">|</span>
+                <a href="javascript:;">儿童隐私保护指引</a>
+                <span class="line">|</span>
+                <a href="javascript:;">腾讯游戏招聘</a>
+                <span class="line">|</span>
+                <a href="javascript:;">腾讯游戏客服</a>
+                <span class="line">|</span>
+                <a href="javascript:;">游戏列表</a>
+                <span class="line">|</span>
+                <a href="javascript:;">广告服务及商务合作</a>
+            </li>
+            <li class="copyright_zh">
+                <a href="javascript:;">腾讯公司版权所有</a>
+            </li>
+            <li class="copyright_en">
+                <p class="copyright_txt">COPYRIGHT © 1998 - 2020 TENCENT. ALL RIGHTS RESERVED.</p>
+                <p class="copyright_txt">COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.</p>
+            </li>
+            <li class="limit_age">本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。</li>
+            <li class="copyright_public">
+                <a href="javascript:;">
+                    <img src="./src/imgs/gswj.png">
+                    工商网监电子标识
+                </a>
+                <span class="line">|</span>
+                <a href="javascript:;">粤网文[2017]6138-1456号</a>
+                <span class="line">|</span>
+                <a href="javascript:;">（总）网出证（粤）字第057号</a>
+            </li>
+            <li class="copyright_private">
+                批准文号：新出审字[2011]310号 
+                <span class="line">|</span>
+                出版物号：ISBN 978-7-89989-145-2
+                <span class="line">|</span>
+                全国文化市场统一举报电话：12318 
+            </li>
+        </ul>
+    </div>`
+        // 添加内容
+        footNode.innerHTML = nodeText
+        return footNode
+    }
     // 创建script标签
     const createScript = function (url) {
         const scriptNode = document.createElement('script')
@@ -1055,6 +1113,8 @@
         containNode.appendChild(createHotNew(value.data))
         // 将contain节点添加到wrapnode中
         wrapNode.appendChild(containNode)
+        // 创建footer节点
+        wrapNode.appendChild(createFoot())
     })
     .then(() => {
         containNode.appendChild(createMain())
@@ -1063,8 +1123,11 @@
         const htmlNode = document.documentElement
         const jqNode = createScript('./src/js/jquery.js')
         jqNode.onload = function () {
+            console.log('jq-load')
+
             const indexNode = createScript('./src/js/index.js')
             indexNode.onload = function () {
+                console.log('indexNode-load')
                 // 关闭加载动画
                 const forShowNode = document.getElementById('froword-bg')
                 document.body.removeChild(forShowNode)
