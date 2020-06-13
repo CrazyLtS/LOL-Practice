@@ -177,52 +177,52 @@
         const noticeScript = createScript('./src/components/notice.js')
         
         noticeScript.onload = function () {
-            // 关闭加载动画
-            const forShowNode = document.getElementById('froword-bg')
-            document.body.removeChild(forShowNode)
-            wrapNode.style.visibility = 'visible'
             const com3Script = createScript('./src/components/component3.js')
             htmlNode.appendChild(com3Script)
             com3Script.addEventListener('load', function () {
                 const com4Script = createScript('./src/components/component4.js')
-                htmlNode.appendChild(com4Script)
-                com4Script.addEventListener('load', () => {
-
-                    let endScroll = 0
-                    let nowScroll
-                    let loadTimes = 0
-                    const handleWheel =  function () {
-                        // 模块加载完之后移除wheel事件
-                        if (loadTimes === 4) {
-                            this.removeEventListener('wheel', handleWheel)
-                        }
-                        nowScroll = this.scrollTop === 0 ? null : this.scrollTop
-                        if (endScroll === nowScroll) {
-                            switch (loadTimes) {
-                                case 0:
-                                    const com5Script = createScript('./src/components/component5.js')
-                                    htmlNode.appendChild(com5Script)
-                                    break;
-                                case 1:
-                                    const com6Script = createScript('./src/components/component6.js')
-                                    htmlNode.appendChild(com6Script)
-                                    break;
-                                case 2:
-                                    const com7Script = createScript('./src/components/component7.js')
-                                    htmlNode.appendChild(com7Script)
-                                    break;
-                                case 3:
-                                    const com8Script = createScript('./src/components/component8.js')
-                                    htmlNode.appendChild(com8Script)
-                                    break;
-                            }
-                            loadTimes++
-                        }
-                        endScroll = nowScroll
-                    }
-                    wrapNode.addEventListener('wheel', handleWheel)
+                    htmlNode.appendChild(com4Script)
+                    com4Script.addEventListener('load', function () {
+                    // 关闭加载动画
+                    const forShowNode = document.getElementById('froword-bg')
+                    document.body.removeChild(forShowNode)
+                    wrapNode.style.visibility = 'visible'
                 })
             })
+            // 监听wrapNode 的wheel事件
+            let endScroll = 0
+            let nowScroll
+            let loadTimes = 0
+            const handleWheel =  function () {
+                // 模块加载完之后移除wheel事件
+                if (loadTimes === 4) {
+                    this.removeEventListener('wheel', handleWheel)
+                }
+                nowScroll = this.scrollTop === 0 ? null : this.scrollTop
+                if (endScroll === nowScroll) {
+                    switch (loadTimes) {
+                        case 0:
+                            const com5Script = createScript('./src/components/component5.js')
+                            htmlNode.appendChild(com5Script)
+                            break;
+                        case 1:
+                            const com6Script = createScript('./src/components/component6.js')
+                            htmlNode.appendChild(com6Script)
+                            break;
+                        case 2:
+                            const com7Script = createScript('./src/components/component7.js')
+                            htmlNode.appendChild(com7Script)
+                            break;
+                        case 3:
+                            const com8Script = createScript('./src/components/component8.js')
+                            htmlNode.appendChild(com8Script)
+                            break;
+                    }
+                    loadTimes++
+                }
+                endScroll = nowScroll
+            }
+            wrapNode.addEventListener('wheel', handleWheel)
         }
         htmlNode.appendChild(noticeScript)
         htmlNode.appendChild(createScript('./src/js/index.js'))
