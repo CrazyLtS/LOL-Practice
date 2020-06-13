@@ -48,8 +48,9 @@
     const handleTransitionRen = function (slipObj) {
         const [...pointItmes] = this.parentElement.querySelectorAll('.swiper-icon')
         // 当前图片index
-        const index = Math.floor(Number.parseInt(slipObj.getTransform('translateX')) / slipObj.parameters.speed) % pointItmes.length
+        let index = Math.floor(Number.parseInt(slipObj.getTransform('translateX')) / slipObj.parameters.speed) % pointItmes.length
         // 添加active类
+        if (index < 0) {index = 0}
         pointItmes[index].classList.add('active')
         // 去除其他兄弟元素的active类
         pointItmes.forEach(other => {
