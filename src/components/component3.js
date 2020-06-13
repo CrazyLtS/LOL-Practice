@@ -119,5 +119,7 @@
         })
         // 向父级组件添加子组件
         document.querySelector('.contain .main').appendChild(componentNode)
+    }).catch((error) => {
+        console.log(error)
     })
 })()

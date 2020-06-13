@@ -213,5 +213,7 @@
         })
         // 向父级组件添加子组件
         document.querySelector('.contain .main').appendChild(com4Node)
+    }).catch((error) => {
+        console.log(error)
     })
 })()

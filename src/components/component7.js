@@ -144,6 +144,8 @@
                             })
                             this.data = data.data
                             this.querySelector('.hero-list-wrap').appendChild(startNode)
+                        }).catch((error) => {
+                            console.log(error)
                         })
                     }
                 }

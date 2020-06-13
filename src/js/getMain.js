@@ -226,5 +226,7 @@
         }
         htmlNode.appendChild(noticeScript)
         htmlNode.appendChild(createScript('./src/js/index.js'))
+    }).catch((error) => {
+        console.log(error)
     })
 })()

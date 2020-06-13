@@ -145,5 +145,7 @@
             }
         })
         document.querySelector('.contain .main').appendChild(noticeNode)
+    }).catch((error) => {
+        console.log(error)
     })
 })()
