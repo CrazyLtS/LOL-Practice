@@ -1,4 +1,3 @@
-'use strict'
 /* 
        创建滑屏类slip
         */
@@ -55,11 +54,15 @@ class Slip {
     // 设置主体包含块的宽
     setSize(Spacing = 0) {
         let slips = this.slipObj.querySelectorAll('.slip-item')
+        const startIndex = slips.length
         // 保存轮播包含块的宽度
         let ulWidth = slips.length * (slips[0].offsetWidth + Spacing)
         // 保存轮播的次数
         let index;
         // 判断是否需要循环轮播
+        // 设置主体包含块的宽高
+        this.slipObj.style.width = ulWidth + 'px'
+        this.slipObj.style.height = slips[0].offsetHeight + 'px'
         if (this.parameters.isAuto) {
             for (const iterator of slips) {
                 this.slipObj.append(iterator.cloneNode(true))
@@ -67,14 +70,11 @@ class Slip {
             slips = this.slipObj.querySelectorAll('.slip-item')
             // 重置宽度
             ulWidth = slips.length * (slips[0].offsetWidth + Spacing)
+            this.slipObj.style.width = ulWidth + 'px'
             // 设置初始位置
-            index =Math.abs(Math.round(this.slipObj.offsetWidth / (this.parameters.speed + Spacing)))
-            
-            this.setTransform('translateX', `${this.parameters.speed * (index / 2)}px`)
+            index =Math.abs(Math.floor((this.slipObj.offsetWidth / (this.parameters.speed + Spacing)) % startIndex))
+            this.setTransform('translateX', `${this.parameters.speed * (index - 1) }px`)
         }
-        // 设置主体包含块的宽高
-        this.slipObj.style.width = ulWidth + 'px'
-        this.slipObj.style.height = slips[0].offsetHeight + 'px'
         // 设置样式
         this.slipObj.style.transition = 'transform .5s'
     }
@@ -188,8 +188,8 @@ class Slip {
                 if (beyond > 0) {
                     $this.setTransform('translateX', `0px`)
                     return
-                } else if (beyond < ($this.slipObj.querySelectorAll('.slip-item').length - num) * $this.parameters.speed) {
-                    $this.setTransform('translateX', `${($this.slipObj.querySelectorAll('.slip-item').length - num) * $this.parameters.speed}px`)
+                } else if (beyond < -($this.slipObj.offsetWidth - $this.obj.offsetWidth)) {
+                    $this.setTransform('translateX', `${-($this.slipObj.offsetWidth - $this.obj.offsetWidth)}px`)
                     return
                 }
             }

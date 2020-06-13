@@ -1,0 +1,95 @@
+{
+    "data": {
+        "fzheroList": [
+            {
+                "heroName": "Ashe",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Ashe.png"
+            },{
+                "heroName": "Gangplank",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Gangplank.png"
+            },{
+                "heroName": "Heimerdinger",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Heimerdinger.png"
+            },{
+                "heroName": "Jhin",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Jhin.png"
+            },{
+                "heroName": "Kalista",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Kalista.png"
+            },{
+                "heroName": "Kassadin",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Kassadin.png"
+            },{
+                "heroName": "Katarina",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Katarina.png"
+            },{
+                "heroName": "LeeSin",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/LeeSin.png"
+            },{
+                "heroName": "Lissandra",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Lissandra.png"
+            },{
+                "heroName": "Nami",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Nami.png"
+            },{
+                "heroName": "Poppy",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Poppy.png"
+            },{
+                "heroName": "Ryze",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Ryze.png"
+            },{
+                "heroName": "Skarner",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Skarner.png"
+            },{
+                "heroName": "Sona",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Sona.png"
+            },{
+                "heroName": "Talon",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Talon.png"
+            },{
+                "heroName": "Teemo",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Teemo.png"
+            },{
+                "heroName": "Trundle",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Trundle.png"
+            },{
+                "heroName": "Viktor",
+                "heroImg": "./src/imgs/contain/hero/fz-hero/Viktor.png"
+            }
+        ],
+        "newSkin": {
+            "name": "魔女2020",
+            "skinDes": "全新皮肤、炫彩礼包上线",
+            "skinImg": "./src/imgs/contain/hero/skin-0.jpg"
+        },
+        "newHero": {
+            "name": "远古恐惧 费德提克",
+            "heroDes": "穿街过市 人声皆暗。",
+            "heroImg": "./src/imgs/contain/hero/hero-0.jpg"
+        },
+        "moreSkin": [
+            {
+              "name": "创世魔神2020",
+              "skinImg": "./src/imgs/contain/hero/skin-nav/0.jpg"
+            },{
+                "name": "愚人节2020",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/1.jpg"
+              },{
+                "name": "峡谷勇者2020",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/2.jpg"
+              },{
+                "name": "银河战争",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/3.jpg"
+              },{
+                "name": "黯晶2020",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/4.jpg"
+              },{
+                "name": "腥红之月2020",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/5.jpg"
+              },{
+                "name": "2020情人节",
+                "skinImg": "./src/imgs/contain/hero/skin-nav/6.jpg"
+              }
+        ]
+    }
+}

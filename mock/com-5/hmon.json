@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "alUrl": "./src//imgs/contain/swiper/hotAlbem/01.jpg",
+            "alName": "主播日报",
+            "alProg": "2020-04-27更新",
+            "alText": "主播每日搞笑镜 头集锦。",
+            "alAuthorImg": "./src//imgs/contain/swiper/hotAlbem/01-a.jpg",
+            "alAuthorName": "兔玩LOL"
+        },{
+            "alUrl": "./src//imgs/contain/swiper/hotAlbem/02.png",
+            "alName": "巅峰top5",
+            "alProg": "2019-12-02更新",
+            "alText": "巅峰top5是一档精彩英雄联盟赛事集锦节目，为广大玩家带来每日LPL比赛精彩镜头",
+            "alAuthorImg": "./src//imgs/contain/swiper/hotAlbem/02-a.webp",
+            "alAuthorName": "飞熊TV英雄联盟"
+        },{
+            "alUrl": "./src//imgs/contain/swiper/hotAlbem/03.jpg",
+            "alName": "小鱼Top5",
+            "alProg": "2020-04-27更新",
+            "alText": "汇集英雄联盟最顶级精彩操作视频。",
+            "alAuthorImg": "./src//imgs/contain/swiper/hotAlbem/03-a.png",
+            "alAuthorName": "LOL解说小鱼"
+        },{
+            "alUrl": "./src//imgs/contain/swiper/hotAlbem/04.jpg",
+            "alName": "联盟囧事",
+            "alProg": "2019-12-19更新",
+            "alText": "联盟囧事为您展示游戏中的逗B操作/坑爹队友的花式神操作，一分钟小视频带你笑不停！悄悄告诉您【这是一档每日搞笑的节目】",
+            "alAuthorImg": " ",
+            "alAuthorName": "帅气猫出品"
+        },{
+            "alUrl": "./src//imgs/contain/swiper/hotAlbem/05.jpg",
+            "alName": "鹌鹑云顶锦囊",
+            "alProg": "2020-03-09更新",
+            "alText": "7连鸡，吃鸡霸主，云顶吃鸡小王子的吃鸡秘诀，斗帝流、盾法流、东北大乱盾创造者",
+            "alAuthorImg": "./src//imgs/contain/swiper/hotAlbem/05-a.webp",
+            "alAuthorName": "东北大鹌鹑"
+        }
+    ]
+}

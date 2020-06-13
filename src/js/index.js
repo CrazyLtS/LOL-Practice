@@ -21,59 +21,16 @@
     }
     switchImg()
     /* 
-        轮播图逻辑
-     */
-    const swiper = function () {
-
-        // 获取li 元素
-        const item = $('.swiper .swiper-item')
-        const itemLength = item.length
-
-        // 获取ul元素
-        const swiper = $('.swiper')
-        swiper.css({
-            'width': item.width() * itemLength + 'px',
-        })
-
-        let timer;
-        const handleTimer = function () {
-            swiper.css('transition', 'left .5s')
-            swiper.css('left', (swiper.position().left - item.width()) + 'px')
-            swiper.on('transitionend', function () {
-                if (swiper.position().left <= (-item.width() * (itemLength - 1))) {
-                    swiper.css('transition', 'left 0s')
-                    swiper.css('left', 0 + 'px')
-                }
-                let index = Math.abs(swiper.position().left / (-item.width()))
-                $('.swiper-icon').eq(index).siblings().removeClass('active')
-                $('.swiper-icon').eq(index).addClass('active')
-            })
-        }
-        timer = setInterval(handleTimer, 2000)
-
-        $('.swiper-icon').mouseenter(function () {
-            $(this).siblings().removeClass('active')
-            $(this).addClass('active')
-            clearInterval(timer)
-            swiper.css('left', (-$(this).index() * item.width()) + 'px')
-            $(this).mouseleave(function () {
-                clearInterval(timer)
-                timer = setInterval(handleTimer, 2000);
-            })
-        })
-
-    }
-    swiper()
-    /* 
         公告部分逻辑
     */
     const selected = function () {
+        $('.nav-btn')
         $('.nav-btn').mouseenter(function () {
             $(this).siblings().removeClass('selected')
             $(this).addClass('selected')
         })
     }
-    selected()
+    // selected()
     /* 
         视频播放暂停控制
      */

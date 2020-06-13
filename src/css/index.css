@@ -331,6 +331,7 @@ body {
 }
 .wraper .contain .main {
   width: 100%;
+  min-height: 600px;
   background-color: #eee;
 }
 .wraper .contain .main .notice {
@@ -367,19 +368,20 @@ body {
   float: left;
   overflow: hidden;
   background-color: #333;
+  user-select: none;
 }
-.wraper .contain .main .notice .notice-swiper .swiper {
+.wraper .contain .main .notice .notice-swiper .slip-main {
   position: absolute;
   left: 0;
   transition: left 0.5s;
-  overflow: hidden;
 }
-.wraper .contain .main .notice .notice-swiper .swiper .swiper-item {
+.wraper .contain .main .notice .notice-swiper .slip-main .slip-item {
+  cursor: pointer;
   list-style: none;
   float: left;
   width: 762px;
 }
-.wraper .contain .main .notice .notice-swiper .swiper .swiper-item img {
+.wraper .contain .main .notice .notice-swiper .slip-main .slip-item img {
   width: 100%;
 }
 .wraper .contain .main .notice .notice-swiper .swiper-icon-nav {
@@ -419,7 +421,23 @@ body {
 .wraper .contain .main .notice .notice-news .notice-nav .notice-btn:not(:last-child) {
   margin-right: 74px;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon-title {
+.wraper .contain .main .notice .notice-news .ifon-wrap {
+  width: 100%;
+  height: 285px;
+}
+.wraper .contain .main .notice .notice-news .ifon-wrap .error {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.wraper .contain .main .notice .notice-news .ifon-wrap .displaytype {
+  display: block !important;
+}
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon {
+  display: none;
+}
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon-title {
   width: 100%;
   height: 59px;
   line-height: 59px;
@@ -429,7 +447,7 @@ body {
   border-bottom: 1px solid #e0e2e2;
   color: #0da0b4;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon {
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -439,7 +457,7 @@ body {
   font-size: 14px;
   border-bottom: 1px solid #e0e2e2;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon .ifon-text {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon .ifon-text {
   cursor: pointer;
   color: #424242;
   letter-spacing: 1px;
@@ -447,20 +465,21 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon .nt-text:hover {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon .nt-text:hover {
   color: #bb9a6c;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon .gm-text:hover {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon .gm-text:hover {
   color: #6388c5;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon .ifon-logo {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon .ifon-logo {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   margin: auto 0;
+  user-select: none;
 }
-.wraper .contain .main .notice .notice-news .notice-ifon .ifon .notice-time {
+.wraper .contain .main .notice .notice-news .ifon-wrap .notice-ifon .ifon .notice-time {
   position: absolute;
   right: 0;
   top: 0;
@@ -519,13 +538,26 @@ body {
   margin-right: 5px;
 }
 .wraper .contain .main .component-3 .campaign .cam-contain {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
   margin-top: 20px;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap {
+.wraper .contain .main .component-3 .campaign .cam-contain .displaytype {
+  display: flex !important;
+}
+.wraper .contain .main .component-3 .campaign .cam-contain .error {
+  display: none;
+  padding-left: 250px;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing {
+  width: 100%;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap {
   position: relative;
   width: 176px;
   height: 268px;
@@ -533,19 +565,19 @@ body {
   transition: transform 0.3s;
   background-color: #fff;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap:hover {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap:hover {
   transform: translateY(-8px);
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap:hover .innerhover {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap:hover .innerhover {
   display: block;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap:hover .tap-title {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap:hover .tap-title {
   color: #1da6ba;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .tap-img {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .tap-img {
   width: 100%;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .innerhover {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .innerhover {
   display: none;
   position: absolute;
   top: 0;
@@ -559,7 +591,7 @@ body {
   background-size: 365px 185px;
   background-repeat: no-repeat;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .innerhover .innerhover-border {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .innerhover .innerhover-border {
   box-sizing: border-box;
   display: inline-block;
   padding: 0 11px 0;
@@ -567,19 +599,19 @@ body {
   width: 100%;
   line-height: 1.5em;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .innerhover .innerhover-border h4 {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .innerhover .innerhover-border h4 {
   margin-bottom: 8px;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   color: #cdbe91;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .innerhover .innerhover-border p {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .innerhover .innerhover-border p {
   text-align: center;
   font-size: 12px;
   color: #9d9c9c;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .tap-title {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .tap-title {
   width: 100%;
   text-indent: 1em;
   font-size: 14px;
@@ -588,7 +620,7 @@ body {
   line-height: 18px;
   text-align: left;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .end-time {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .end-time {
   position: absolute;
   bottom: 0;
   left: 12px;
@@ -597,7 +629,7 @@ body {
   height: 25px;
   color: #1da6ba;
 }
-.wraper .contain .main .component-3 .campaign .cam-contain .tap .end-time .new-btn {
+.wraper .contain .main .component-3 .campaign .cam-contain .hot-doing .tap .end-time .new-btn {
   display: inline-block;
   position: absolute;
   top: 3px;
@@ -1294,6 +1326,15 @@ body {
   display: block;
   animation: fzlist 0.5s;
 }
+.wraper .contain .main .component-5 .error {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.wraper .contain .main .component-5 .displaytype {
+  display: block !important;
+}
 .wraper .contain .main .component-5 .new-video {
   height: 462px;
 }
@@ -1329,12 +1370,13 @@ body {
   margin-left: 10px;
   background-color: #cacbcc;
 }
-.wraper .contain .main .component-5 .new-video .video-content {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content {
+  display: none;
   position: relative;
   margin-top: 32px;
   overflow: hidden;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item {
   float: left;
   width: 179px;
   height: 185px;
@@ -1342,25 +1384,25 @@ body {
   margin: 0 16px 16px 0;
   position: relative;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .mask-img {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .mask-img {
   width: 100%;
   height: 107px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .mask-img img {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .mask-img img {
   width: 100%;
   height: 100%;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .video-length {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .video-length {
   position: absolute;
   right: 10px;
   top: 85px;
   color: #fff;
   font-size: 12px;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .name-video {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .name-video {
   position: absolute;
   left: 0;
   top: 118px;
@@ -1374,17 +1416,17 @@ body {
   color: #424242;
   cursor: pointer;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .name-video:hover {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .name-video:hover {
   color: #0da0b4;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .play-times {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .play-times {
   position: absolute;
   left: 9px;
   bottom: 4px;
   font-size: 12px;
   color: #919091;
 }
-.wraper .contain .main .component-5 .new-video .video-content .video-item .update-time {
+.wraper .contain .main .component-5 .new-video .video-wrap .video-content .video-item .update-time {
   position: absolute;
   right: 13px;
   bottom: 4px;
@@ -1408,6 +1450,7 @@ body {
   height: 350px;
 }
 .wraper .contain .main .component-5 .hot-album .slip-wrap .slip-main {
+  display: none;
   position: absolute;
   left: 1px;
   overflow: hidden;
@@ -1492,7 +1535,7 @@ body {
   background-color: #eee;
   background-image: url(../imgs/spring/index-spr.png);
   background-position: 0 -522px;
-  background-size: 619px 572px;
+  background-size: 607px 572px;
   background-repeat: no-repeat;
 }
 .wraper .contain .main .component-5 .hot-album .more-hotprogram:hover .more-arrow {
@@ -1530,7 +1573,7 @@ body {
   display: block;
   position: absolute;
   left: -22px;
-  top: 200px;
+  top: 140px;
   background-image: url(../imgs/spring/index-spr.png);
   background-size: 638px 572px;
   background-repeat: no-repeat;
@@ -1541,7 +1584,7 @@ body {
 }
 .wraper .contain .main .component-5 .hot-album .swiper-right {
   position: absolute;
-  top: 200px;
+  top: 140px;
   right: -22px;
   background-position: -193px -397px;
   width: 23px;
@@ -1570,6 +1613,15 @@ body {
 .component-6 .games-container {
   min-height: 300px;
 }
+.component-6 .games-container .error {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.component-6 .games-container .displaytype {
+  display: block !important;
+}
 .component-6 .games-container .con-01 {
   position: relative;
 }
@@ -1587,7 +1639,7 @@ body {
 }
 .component-6 .games-container .con-01 .game-wrap .game-ifo {
   width: 245px;
-  height: 196px;
+  height: 200px;
   background-color: #b2b2b2;
   float: left;
   margin-right: 16px;
@@ -1908,6 +1960,7 @@ body {
   height: 35px;
 }
 .component-6 .games-container .con-02 {
+  display: none;
   width: 100%;
   height: 300px;
 }
@@ -2073,6 +2126,123 @@ body {
   background-size: 699px 607px;
   background-repeat: no-repeat;
   background-position: 0 -452px;
+}
+.component-7 .cam-header .nav-btn {
+  position: relative;
+  padding-left: 28px;
+  line-height: 34px;
+  margin-right: 40px;
+}
+.component-7 .cam-header .nav-btn::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 2px;
+  width: 20px;
+  height: 19px;
+  background: url(../imgs/spring/index-spr.png) no-repeat 638px 572px;
+  background-position: -406px -316px;
+}
+.component-7 .cam-header .nav-btn:hover {
+  font-weight: 700;
+  color: #1da6ba !important;
+}
+.component-7 .cam-header .nav-btn:hover::after {
+  background-position: -431px -316px;
+  width: 20px;
+  height: 19px;
+  left: 2px;
+}
+.component-7 .cam-header .selected::after {
+  background-position: -431px -316px;
+  width: 20px;
+  height: 19px;
+  left: 2px;
+}
+.component-7 .hero-list-wrap {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 25px;
+}
+.component-7 .hero-list-wrap .error {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.component-7 .hero-list-wrap .displaytype {
+  display: block !important;
+}
+.component-7 .hero-list-wrap .hero-inner-list {
+  position: relative;
+  display: none;
+  margin-top: 20px;
+  height: 425px;
+}
+.component-7 .hero-list-wrap .hero-inner-list .ps__rail-x {
+  display: none;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul {
+  width: 100%;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item {
+  position: relative;
+  float: left;
+  width: 88px;
+  height: 90px;
+  overflow: visible;
+  margin: 0 13px 16px 0;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item > a {
+  display: block;
+  height: 100%;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item > a > img {
+  display: block;
+  margin: 0 auto;
+  width: 66px;
+  height: 66px;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item > a .hover-icon {
+  display: none;
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: 0;
+  left: 12px;
+  transition: background 0.2s;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item > a .hover-icon::after {
+  content: '\0020';
+  display: block;
+  margin: 24px auto 0 auto;
+  background-position: -401px -226px;
+  width: 22px;
+  height: 21px;
+  background-image: url(../imgs/spring/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item > a .hero-name {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 90px;
+  font-size: 12px;
+  color: #333;
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item:hover .hover-icon {
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+}
+.component-7 .hero-list-wrap .hero-inner-list > ul .hero-item:nth-child(13n) {
+  margin-right: 0;
 }
 .component-8 {
   padding-top: 64px;

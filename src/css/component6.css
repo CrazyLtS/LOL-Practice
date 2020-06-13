@@ -17,6 +17,15 @@
 .component-6 .games-container {
   min-height: 300px;
 }
+.component-6 .games-container .error {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+  color: #a06262;
+}
+.component-6 .games-container .displaytype {
+  display: block !important;
+}
 .component-6 .games-container .con-01 {
   position: relative;
 }
@@ -34,7 +43,7 @@
 }
 .component-6 .games-container .con-01 .game-wrap .game-ifo {
   width: 245px;
-  height: 196px;
+  height: 200px;
   background-color: #b2b2b2;
   float: left;
   margin-right: 16px;
@@ -355,6 +364,7 @@
   height: 35px;
 }
 .component-6 .games-container .con-02 {
+  display: none;
   width: 100%;
   height: 300px;
 }

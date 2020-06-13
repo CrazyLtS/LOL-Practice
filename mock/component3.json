@@ -1,0 +1,30 @@
+{
+    "rec": true,
+    "data": [
+        {
+            "tapUrl": "./src/imgs/contain/cam/01.jpg",
+            "tapTitle": "谁是最强竞猜王",
+            "tapMeg": "4月20日-5月2日参与2020LPL春季赛竞猜活动，赢取Q币和周边奖励。",
+            "tapTime": "2020-04-20 - 2020-05-02",
+            "tapOver": "10天后结束"
+        },{
+            "tapUrl": "./src/imgs/contain/cam/02.jpg",
+            "tapTitle": "LPL周边特惠",
+            "tapMeg": "助威LPL季后赛，LPL主题周边限时7折回馈。",
+            "tapTime": "2020-04-20 - 2020-05-05",
+            "tapOver": "13天后结束"
+        },{
+            "tapUrl": "./src/imgs/contain/cam/03.jpg",
+            "tapTitle": "魔女 婕拉 至臻",
+            "tapMeg": "100 至臻点(2020)兑换",
+            "tapTime": "2020-04-17 - 2021-01-29",
+            "tapOver": "282天后结束"
+        },{
+            "tapUrl": "./src/imgs/contain/cam/04.jpg",
+            "tapTitle": "银河战争通行证",
+            "tapMeg": "集银河币兑换暗星 墨菲特 至臻、至臻点（2020）等专属奖励",
+            "tapTime": "2020-03-27 - 2020-05-01",
+            "tapOver": "9天后结束"
+        }
+    ]
+}

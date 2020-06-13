@@ -1,0 +1,38 @@
+{
+    "rec": true,
+    "data": {
+        "noticeItems": [
+            {
+                "itemTitle": "魔女 婕拉 至臻",
+                "imgUrl": "./src/imgs/contain/swiper/monv.jpeg"
+            },
+            {
+                "itemTitle": "魔女2020",
+                "imgUrl": "./src/imgs/contain/swiper/monv2020.jpeg"
+            },
+            {
+                "itemTitle": "参与竞猜赢Q币",
+                "imgUrl": "./src/imgs/contain/swiper/winqbi.jpeg"
+            },
+            {
+                "itemTitle": "银河战争通行证",
+                "imgUrl": "./src/imgs/contain/swiper/yinhe.jpeg"
+            },
+            {
+                "itemTitle": "LPL周边特惠",
+                "imgUrl": "./src/imgs/contain/swiper/lolsaid.jpeg"
+            }
+        ],
+        "noticeNews": {
+            "title": "LPL春季赛季后赛赛程正式公布",
+            "ifons": [
+                {"type": "nt", "name": "公告", "text": "10.8云顶之弈更新：暗星法师泽拉斯降临", "time": "04-15"},
+                {"type": "nt", "name": "公告", "text": "10.8版本更新公告：死亡机制迎来重大调整", "time": "04-15"},
+                {"type": "gm", "name": "赛事", "text": "LPL春季赛季后赛将启 群雄逐鹿决战巅峰", "time": "04-20"},
+                {"type": "nt", "name": "公告", "text": "凤出东方 凰鸣四海！FPX冠军手办抢先看！", "time": "04-20"},
+                {"type": "gm", "name": "赛事", "text": "2020LPL春季赛常规赛荣誉评定开启", "time": "04-17"},
+                {"type": "nt", "name": "公告", "text": "甜心少女赖美云加盟《偶像陪练团》 携手红莲大战云顶之弈", "time": "04-16"}
+            ]
+        }
+    }
+}

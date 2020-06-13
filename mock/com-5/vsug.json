@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+           "vdUrl": "./src/imgs/contain/hotVideo/01.jpg",
+           "vdTime": "01:51",
+           "vdContent": "这是克制女团与暗星的最强装备？斗鱼梨落解锁经典斗枪出装",
+           "plTimes": "4314",
+           "upTime": "4小时前"
+        },{
+            "vdUrl": "./src/imgs/contain/hotVideo/02.jpg",
+            "vdTime": "06:16",
+            "vdContent": "LOL：令人欢呼的5大完美团战，这配合看完后，就一句话：痛快",
+            "plTimes": "1.2万次播放",
+            "upTime": "2020-04-26"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/03.jpg",
+            "vdTime": "01:45",
+            "vdContent": "云顶之弈：星守女团被吊打，粉丝不开心，斗鱼纯子：福利来搭救",
+            "plTimes": "7万次播放",
+            "upTime": "2020-04-24"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/04.jpg",
+            "vdTime": "10:47 ",
+            "vdContent": "英雄在干嘛：理发师小白料理师蛇蛇上线小花生分享队员初印象",
+            "plTimes": "2万次播放",
+            "upTime": "2020-04-20"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/05.jpg",
+            "vdTime": "03:23",
+            "vdContent": "TOP5：Doinb瑞兹掌控雷电极限五杀",
+            "plTimes": "1.8万次播放",
+            "upTime": "2020-04-26"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/06.jpg",
+            "vdTime": "02:21",
+            "vdContent": "Mlxg复盘RNG比赛 喊话Ming：看你们比赛看饿了！",
+            "plTimes": "3万次播放",
+            "upTime": "2020-04-25"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/07.jpg",
+            "vdTime": "03:49",
+            "vdContent": "【JDG英雄联盟】《JLOG》京东 加油",
+            "plTimes": "1.7万次播放",
+            "upTime": "2020-04-23"
+         },{
+            "vdUrl": "./src/imgs/contain/hotVideo/0.jpg",
+            "vdTime": "00:46",
+            "vdContent": "theshy厄斐琉斯上单秀翻Puff：iG又多了一个黑科技?",
+            "plTimes": "3.7万次播放",
+            "upTime": "2020-04-25"
+         }
+    ]
+}

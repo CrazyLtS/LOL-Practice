@@ -279,6 +279,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
        } 
        .main {
            width: 100%;
+           min-height: 600px;
            background-color: #eee;
             .notice {
                 height: 359px;
@@ -313,12 +314,13 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                     float: left;
                     overflow: hidden;
                     background-color: #333;
-                    .swiper {
+                    user-select: none;
+                    .slip-main {
                         position: absolute;
                         left: 0;
                         transition: left .5s;
-                        overflow: hidden;
-                        .swiper-item {
+                        .slip-item {
+                            cursor: pointer;
                             list-style: none;
                             float: left;
                             width: 762px;
@@ -364,60 +366,75 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                             }
                         }
                     }
-                    .notice-ifon {
-                        .ifon-title {
-                            width: 100%;
-                            height: 59px;
-                            line-height: 59px;
-                            font-size: 22px;
-                            font-weight: 700;
+                    .ifon-wrap {
+                        width: 100%;
+                        height: 285px;
+                        .error {
+                            display: none;
+                            padding-top: 100px;
                             text-align: center;
-                            border-bottom: 1px solid #e0e2e2;
-                            color: #0da0b4;
+                            color: #a06262;
                         }
-                        .ifon {
-                            box-sizing: border-box;
-                            position: relative;
-                            width: 100%;
-                            height: 37px;
-                            line-height: 37px;
-                            padding: 0 58px 0 54px;
-                            font-size: 14px;
-                            border-bottom: 1px solid #e0e2e2;
-                            .ifon-text {
-                                cursor: pointer;
-                                color: #424242;
-                                letter-spacing: 1px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
+                        .displaytype {
+                            display: block !important;
+                        }
+                        .notice-ifon {
+                            display: none;
+                            .ifon-title {
+                                width: 100%;
+                                height: 59px;
+                                line-height: 59px;
+                                font-size: 22px;
+                                font-weight: 700;
+                                text-align: center;
+                                border-bottom: 1px solid #e0e2e2;
+                                color: #0da0b4;
                             }
-                            .nt-text {
-                                &:hover {
-                                   color: #bb9a6c; 
-                                }
-                            }
-                            .gm-text {
-                                &:hover {
-                                    color: #6388c5;
-                                }
-                            }
-                            .ifon-logo {
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                bottom: 0;
-                                margin: auto 0;
-                            }
-                            .notice-time {
-                                position: absolute;
-                                right: 0;
-                                top: 0;
-                                bottom: 0;
-                                margin: auto 0;
+                            .ifon {
+                                box-sizing: border-box;
+                                position: relative;
+                                width: 100%;
+                                height: 37px;
+                                line-height: 37px;
+                                padding: 0 58px 0 54px;
                                 font-size: 14px;
-                                letter-spacing: 1px;
-                                color: #9d9d9d;
+                                border-bottom: 1px solid #e0e2e2;
+                                .ifon-text {
+                                    cursor: pointer;
+                                    color: #424242;
+                                    letter-spacing: 1px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                                .nt-text {
+                                    &:hover {
+                                       color: #bb9a6c; 
+                                    }
+                                }
+                                .gm-text {
+                                    &:hover {
+                                        color: #6388c5;
+                                    }
+                                }
+                                .ifon-logo {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto 0;
+                                    user-select: none;
+                                }
+                                .notice-time {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto 0;
+                                    font-size: 14px;
+                                    letter-spacing: 1px;
+                                    color: #9d9d9d;
+                                }
                             }
                         }
                     }
@@ -447,90 +464,103 @@ body {font: 12px/1.5 tahoma,sans-serif;}
             .component-3 {
                 .campaign{
                     .cam-contain {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
                         width: 100%;
                         margin-top: 20px;
-                        .tap {
-                            position: relative;
-                            width: 176px;
-                            height: 268px;
-                            cursor: pointer;
-                            transition: transform .3s;
-                            background-color: #fff;
-                            &:hover {
-                                transform: translateY(-8px);
+                        .displaytype {
+                            display: flex !important;
+                        }
+                        .error {
+                            display: none;
+                            padding-left: 250px;
+                            padding-top: 100px;
+                            text-align: center;
+                            color: #a06262;
+                        }
+                        .hot-doing {
+                            width: 100%;
+                            display: none;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            .tap {
+                                position: relative;
+                                width: 176px;
+                                height: 268px;
+                                cursor: pointer;
+                                transition: transform .3s;
+                                background-color: #fff;
+                                &:hover {
+                                    transform: translateY(-8px);
+                                    .innerhover {
+                                        display: block;
+                                    }
+                                    .tap-title {
+                                        color: #1da6ba;
+                                    }
+                                }
+                                .tap-img {
+                                    width: 100%;
+                                }
                                 .innerhover {
-                                    display: block;
+                                    display: none;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 189px;
+                                    line-height: 189px;
+                                    width: 100%;
+                                    background-color: rgba(0, 0, 0, .5);
+                                    background-image: url(../imgs/contain/swiper/comm-spr.png);
+                                    background-position: 1px 2px;
+                                    background-size: 365px 185px;
+                                    background-repeat: no-repeat;
+                                    .innerhover-border {
+                                        box-sizing: border-box;
+                                        display: inline-block;
+                                        padding: 0 11px 0;
+                                        vertical-align: middle;
+                                        width: 100%;
+                                        line-height: 1.5em;
+                                        h4 {
+                                            margin-bottom: 8px;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            color: #cdbe91;
+                                        }
+                                        p {
+                                            text-align: center;
+                                            font-size: 12px;
+                                            color: #9d9c9c;
+                                        }
+                                    }
                                 }
                                 .tap-title {
-                                    color: #1da6ba;
-                                }
-                            }
-                            .tap-img {
-                                width: 100%;
-                            }
-                            .innerhover {
-                                display: none;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                height: 189px;
-                                line-height: 189px;
-                                width: 100%;
-                                background-color: rgba(0, 0, 0, .5);
-                                background-image: url(../imgs/contain/swiper/comm-spr.png);
-                                background-position: 1px 2px;
-                                background-size: 365px 185px;
-                                background-repeat: no-repeat;
-                                .innerhover-border {
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    padding: 0 11px 0;
-                                    vertical-align: middle;
                                     width: 100%;
-                                    line-height: 1.5em;
-                                    h4 {
-                                        margin-bottom: 8px;
-                                        text-align: center;
-                                        font-size: 16px;
-                                        font-weight: 400;
-                                        color: #cdbe91;
-                                    }
-                                    p {
-                                        text-align: center;
-                                        font-size: 12px;
-                                        color: #9d9c9c;
-                                    }
+                                    text-indent: 1em;
+                                    font-size: 14px;
+                                    color: #424242;
+                                    height: 18px;
+                                    line-height: 18px;
+                                    text-align: left;
                                 }
-                            }
-                            .tap-title {
-                                width: 100%;
-                                text-indent: 1em;
-                                font-size: 14px;
-                                color: #424242;
-                                height: 18px;
-                                line-height: 18px;
-                                text-align: left;
-                            }
-                            .end-time {
-                                position: absolute;
-                                bottom: 0;
-                                left: 12px;
-                                width: 100%;
-                                font-size: 12px;
-                                height: 25px;
-                                color: #1da6ba;
-                                .new-btn {
-                                    display: inline-block;
+                                .end-time {
                                     position: absolute;
-                                    top: 3px;
-                                    right: 22px;
-                                    background: url(../imgs/contain/swiper/comm-spr.png) no-repeat;
-                                    background-position: -301px -46px;
-                                    width: 29px;
-                                    height: 14px;
+                                    bottom: 0;
+                                    left: 12px;
+                                    width: 100%;
+                                    font-size: 12px;
+                                    height: 25px;
+                                    color: #1da6ba;
+                                    .new-btn {
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 3px;
+                                        right: 22px;
+                                        background: url(../imgs/contain/swiper/comm-spr.png) no-repeat;
+                                        background-position: -301px -46px;
+                                        width: 29px;
+                                        height: 14px;
+                                    }
                                 }
                             }
                         }
@@ -1161,6 +1191,18 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                 }
             }
             .component-5 {
+                // 数据获取错误
+                .error {
+                    display: none;
+                    padding-top: 100px;
+                    text-align: center;
+                    color: #a06262;
+                }
+                // 显示对应模块
+                .displaytype {
+                    display: block !important;
+                }
+                // 新视频模块
                 .new-video {
                     height: 462px;
                     // background-color: #9d9c9c;
@@ -1196,66 +1238,69 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                             background-color: #cacbcc;
                         }
                     }
-                    .video-content {
-                        position: relative;
-                        margin-top: 32px;
-                        overflow: hidden;
-                        .video-item {
-                            float: left;
-                            width: 179px;
-                            height: 185px;
-                            overflow: hidden;
-                            margin: 0 16px 16px 0;
+                    .video-wrap {
+                        .video-content {
+                            display: none;
                             position: relative;
-                            // background-color: #ffdb8b;
-                            .mask-img {
-                                width: 100%;
-                                height: 107px;
+                            margin-top: 32px;
+                            overflow: hidden;
+                            .video-item {
+                                float: left;
+                                width: 179px;
+                                height: 185px;
                                 overflow: hidden;
+                                margin: 0 16px 16px 0;
                                 position: relative;
-                                cursor: pointer;
-                                img {
+                                // background-color: #ffdb8b;
+                                .mask-img {
                                     width: 100%;
-                                    height: 100%;
+                                    height: 107px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    cursor: pointer;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
                                 }
-                            }
-                            .video-length {
-                                position: absolute;
-                                right: 10px;
-                                top: 85px;
-                                color: #fff;
-                                font-size: 12px;
-                            }
-                            .name-video {
-                                position: absolute;
-                                left: 0;
-                                top: 118px;
-                                width: 100%;
-                                height: 42px;
-                                overflow: hidden;
-                                padding: 0 10px;
-                                box-sizing: border-box;
-                                font-size: 14px;
-                                line-height: 21px;
-                                color: #424242;
-                                cursor: pointer;
-                                &:hover {
-                                    color: #0da0b4; 
+                                .video-length {
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 85px;
+                                    color: #fff;
+                                    font-size: 12px;
                                 }
-                            }
-                            .play-times {
-                                position: absolute;
-                                left: 9px;
-                                bottom: 4px;
-                                font-size: 12px;
-                                color: #919091;
-                            }
-                            .update-time {
-                                position: absolute;
-                                right: 13px;
-                                bottom: 4px;
-                                font-size: 12px;
-                                color: #919091;
+                                .name-video {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 118px;
+                                    width: 100%;
+                                    height: 42px;
+                                    overflow: hidden;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: #424242;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: #0da0b4; 
+                                    }
+                                }
+                                .play-times {
+                                    position: absolute;
+                                    left: 9px;
+                                    bottom: 4px;
+                                    font-size: 12px;
+                                    color: #919091;
+                                }
+                                .update-time {
+                                    position: absolute;
+                                    right: 13px;
+                                    bottom: 4px;
+                                    font-size: 12px;
+                                    color: #919091;
+                                }
                             }
                         }
                     }
@@ -1276,6 +1321,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                         overflow: hidden;
                         height: 350px;
                         .slip-main {
+                            display: none;
                             position: absolute;
                             left: 1px;
                             overflow: hidden;
@@ -1361,7 +1407,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                         background-color: #eee;
                         background-image: url(../imgs/spring/index-spr.png);
                         background-position: 0 -522px;
-                        background-size: 619px 572px;
+                        background-size: 607px 572px;
                         background-repeat: no-repeat;
                         .more-detail();
                         .more-arrow {
@@ -1372,7 +1418,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                         display: block;
                         position: absolute;
                         left: -22px;
-                        top: 200px;
+                        top: 140px;
                         background-image: url(../imgs/spring/index-spr.png);
                         background-size: 638px 572px;
                         background-repeat: no-repeat;
@@ -1383,7 +1429,7 @@ body {font: 12px/1.5 tahoma,sans-serif;}
                     }
                     .swiper-right {
                         position: absolute;
-                        top: 200px;
+                        top: 140px;
                         right: -22px;
                         background-position: -193px -397px;
                         width: 23px;
@@ -1401,5 +1447,5 @@ body {font: 12px/1.5 tahoma,sans-serif;}
 
 // 第六部分
 @import './component6';
-// @import './component7';
+@import './component7';
 @import './component8';
