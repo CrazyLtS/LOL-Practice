@@ -57,7 +57,7 @@
             // 打开请求
             XML.open('GET', url)
             XML.responseType = 'json'
-            XML.timeout = 2000
+            // XML.timeout = 2000
             // 监听完成
             XML.addEventListener('readystatechange', function () {
                 // 监听请求完成
